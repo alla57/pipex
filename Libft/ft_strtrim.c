@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alboumed <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alla <alla@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 11:23:24 by alboumed          #+#    #+#             */
-/*   Updated: 2019/11/22 17:39:18 by alboumed         ###   ########.fr       */
+/*   Updated: 2021/10/15 22:20:30 by alla             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int		*ft_trim2(const char *s1, const char *set, int *size)
+int	*ft_trim2(const char *s1, const char *set, int *size)
 {
 	size_t	i;
 	size_t	j;
@@ -32,7 +32,7 @@ int		*ft_trim2(const char *s1, const char *set, int *size)
 	return (size);
 }
 
-int		*ft_trim(const char *s1, const char *set, int *size)
+int	*ft_trim(const char *s1, const char *set, int *size)
 {
 	size_t	i;
 	size_t	j;
@@ -69,7 +69,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 		return (dest);
 	}
 	ft_trim(s1, set, size);
-	if (!(dest = malloc(sizeof(char) * (size[1] - size[0] + 2))))
+	dest = malloc(sizeof(char) * (size[1] - size[0] + 2));
+	if (!dest)
 		return (NULL);
 	while (i < (size[1] - size[0] + 1))
 	{

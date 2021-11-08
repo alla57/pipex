@@ -8,7 +8,8 @@ NAME = pipex
 
 LIBFTD = Libft/libft.a
 
-SRC_PATH =	pipex.c		\
+SRC_PATH =	pipex.c			\
+			pipex_utils.c	\
 
 SRC = $(addprefix src/,$(SRC_PATH))
 
